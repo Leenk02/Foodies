@@ -1,0 +1,135 @@
+:root{
+    --red: #e53b45;
+    --dark: #222;
+    --muted: #666;
+    --bg: #fff;
+    --bar: #fff6f7;
+    --shadow: 0 10px 25px rgba(0,0,0,.08);
+    --container: min(1400px, 95vw);
+}
+
+/* Base + Header (نفس الطراز لضمان اتساق) */
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; }
+body{ font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--dark); background:#fafafa; }
+.topbar-wrap{ position: sticky; top:0; z-index:1000; background: var(--bar); border-bottom:1px solid #f0d6da; box-shadow: 0 6px 16px rgba(0,0,0,.06); }
+.topbar{ max-width: var(--container); margin: 0 auto; padding: 14px 16px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.brand-link{ text-decoration:none; color:#222; display:flex; align-items:center; gap:8px; }
+.logo-mark{ color: var(--red); font-weight:900; }
+.brand-text{ font-weight:700; }
+.menu{ display:flex; align-items:center; gap:22px; }
+.menu .link{ text-decoration:none; color:#444; font-weight:500; }
+.menu .link.active{ color:#111; }
+.menu .btn.join{ text-decoration:none; padding:8px 14px; border-radius:999px; border:1px solid #eee; background:#fff; box-shadow: var(--shadow); color:#333; }
+
+/* Page intro */
+.menu-hero{
+    max-width: min(1100px, 92vw);
+    margin: 18px auto 8px;
+    padding: 0 6px;
+}
+.menu-hero h1{ margin: 6px 0 4px; }
+.menu-hero .lead{ color: var(--muted); }
+
+/* Filters */
+.filters{
+    max-width: min(1100px, 92vw);
+    margin: 10px auto 20px;
+    padding: 0 6px;
+    display: grid; gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.filters input, .filters select{
+    width: 100%; padding: 12px; border:1px solid #e3e3e3; border-radius: 10px; background:#fff;
+}
+
+/* Cards container */
+.container{
+    max-width: min(1100px, 92vw);
+    margin: 0 auto 60px;
+    padding: 0 6px;
+}
+
+/* Cards grid: 3 أعمدة متجاوبة مع بياض جيد */
+.cards{
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: center;
+}
+@media (max-width: 1000px){ .cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); gap:22px; } }
+@media (max-width: 640px){ .cards{ grid-template-columns: 1fr; gap:20px; } }
+
+/* Card */
+.card{
+    background:#fff; border:1px solid #eee; border-radius:12px; overflow:hidden;
+    display:flex; flex-direction:column; box-shadow: 0 4px 12px rgba(0,0,0,.05);
+    max-width: 320px; margin: 0 auto;
+}
+.card-link{ display:block; }
+.card-img{ width:100%; height: 150px; object-fit: cover; }
+.card-body{ padding: 14px; display:flex; flex-direction:column; gap:8px; }
+.card-name{ margin:0; color: var(--red); font-size: 1.05rem; font-weight: 700; }
+.card-price{ margin:0; color:#222; font-weight:600; }
+.card-actions{ margin-top: 8px; display:flex; gap:8px; }
+.btn{ padding: 8px 10px; border: 1px solid #ddd; border-radius: 8px; background: #fafafa; cursor:pointer; text-decoration:none; color:#222; }
+.btn.primary{ background:#2ecc71; color:#fff; border-color:#2ecc71; }
+
+
+/* Footer */
+.site-footer{
+    background: var(--bar);
+    border-top: 1px solid #f0d6da;
+    margin-top: 30px;
+}
+.footer-inner{
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 22px 16px 28px;
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+}
+.f-col .f-title{
+    margin: 0 0 8px;
+    font-size: 1rem;
+    color: #222;
+}
+.f-list{
+    list-style: none;
+    padding: 0; margin: 0;
+    display: grid; gap: 6px;
+}
+.f-list a{ text-decoration: none; color: #444; }
+.f-list a:hover{ color: #111; }
+.f-brand .brand-link{
+    text-decoration: none; color: #222; display: inline-flex; align-items: center; gap: 8px;
+}
+.f-brand .logo-mark{ color: var(--red); font-weight: 900; }
+.f-brand .brand-text{ font-weight: 700; }
+.about{ color: #555; margin: 8px 0 10px; }
+.copy{ color: #777; font-size: .95rem; }
+.contact a{ color: #444; text-decoration: none; }
+.contact a:hover{ color: #111; }
+.to-top{
+    display: inline-block;
+    margin-top: 8px;
+    text-decoration: none;
+    color: #222;
+    border: 1px solid #ddd;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+/* Responsive footer */
+@media (max-width: 900px){
+    .footer-inner{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 560px){
+    .footer-inner{
+        grid-template-columns: 1fr;
+    }
+}

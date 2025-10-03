@@ -1,0 +1,95 @@
+:root{
+    --roed: #e53b45;
+    --mork: #222;
+    --demp: #666;
+    --hvid: #fff;
+    --bar: #fff6f7;
+    --container: min(1100px, 92vw);
+    --container-wide: min(1400px, 95vw);
+    --skygge: 0 10px 25px rgba(0,0,0,.08);
+}
+
+/* Base */
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; }
+body{ font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--mork); background:#fafafa; }
+
+/* Header */
+.topbar-wrap{ position: sticky; top:0; z-index:1000; background: var(--bar); border-bottom:1px solid #f0d6da; box-shadow: 0 6px 16px rgba(0,0,0,.06); }
+.topbar{ max-width: var(--container-wide); margin:0 auto; padding:14px 16px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.brand-link{ text-decoration:none; color:#222; display:flex; align-items:center; gap:8px; }
+.logo-mark{ color: var(--roed); font-weight:900; }
+.brand-text{ font-weight:700; }
+.menu{ display:flex; align-items:center; gap:22px; }
+.menu .link{ text-decoration:none; color:#444; font-weight:500; }
+.menu .link.active{ color:#111; }
+
+
+.kontakt-hero {
+    position: relative;
+    height: 260px;
+    background: url("../img/img_2.png") no-repeat center center;
+    background-size: cover;
+    color: white;
+}
+.kontakt-hero img {
+    vertical-align: bottom; /* eller top */
+}
+
+.kontakt-hero .hero-indhold {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 4px;
+}
+.hero-indhold{ width: var(--container-wide); margin: 0 auto; padding: 26px 16px; color:#fff; }
+.hero-indhold h1{ margin:0 0 6px; letter-spacing:1px; }
+.hero-indhold p{ margin:0; }
+.hero-indhold a{ color:#ffeaea; text-decoration:none; }
+
+/* Main */
+.kontakt-wrapper{ width: var(--container); margin: 22px auto 40px; padding: 0 16px; }
+.sektion-titel{ text-align:center; margin: 10px 0 22px; }
+
+/* Grid: form + info */
+.kontakt-grid{ display:grid; grid-template-columns: 2fr 1fr; gap:22px; }
+@media (max-width: 900px){ .kontakt-grid{ grid-template-columns:1fr; } }
+
+/* Form */
+.kontakt-form{ background:#fff; border:1px solid #eee; border-radius:12px; padding:16px; box-shadow: var(--skygge); }
+.raekke{ display:grid; gap:12px; margin-bottom:12px; }
+.raekke.tre{ grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 800px){ .raekke.tre{ grid-template-columns: 1fr; } }
+.felt label{ display:block; font-size:.95rem; margin:0 0 6px; color:#333; }
+.felt input,.felt textarea{ width:100%; padding:12px; border:1px solid #e3e3e3; border-radius:10px; font-size:1rem; background:#fff; }
+.felt textarea{ resize: vertical; min-height: 140px; }
+.btn{ padding:10px 14px; border:1px solid #ddd; border-radius:10px; background:#fafafa; cursor:pointer; }
+.btn.primary{ background: var(--roed); color:#fff; border-color: var(--roed); }
+
+/* Info */
+.kontakt-info{ background:#fff; border:1px solid #eee; border-radius:12px; padding:16px; box-shadow: var(--skygge); }
+.kontakt-info p{ color: var(--demp); }
+.info-liste{ list-style:none; padding:0; margin:12px 0 0; display:grid; gap:8px; }
+.info-liste a{ color:#222; text-decoration:none; }
+.info-liste a:hover{ text-decoration:underline; }
+
+/* Footer */
+.site-footer{ background: var(--bar); border-top:1px solid #f0d6da; margin-top: 30px; }
+.footer-inner{ max-width: var(--container-wide); margin:0 auto; padding:22px 16px 28px; display:grid; gap:18px; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; }
+.f-col .f-title{ margin:0 0 8px; font-size:1rem; color:#222; }
+.f-list{ list-style:none; padding:0; margin:0; display:grid; gap:6px; }
+.f-list a{ text-decoration:none; color:#444; }
+.f-list a:hover{ color:#111; }
+.f-brand .brand-link{ text-decoration:none; color:#222; display:inline-flex; align-items:center; gap:8px; }
+.f-brand .logo-mark{ color: var(--roed); font-weight:900; }
+.f-brand .brand-text{ font-weight:700; }
+.about{ color:#555; margin:8px 0 10px; }
+.copy{ color:#777; font-size:.95rem; }
+.contact a{ color:#444; text-decoration:none; }
+.contact a:hover{ color:#111; }
+
+@media (max-width: 900px){ .footer-inner{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px){ .footer-inner{ grid-template-columns: 1fr; } }

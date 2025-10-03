@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="da">
+<head>
+    <meta charset="utf-8" />
+    <title>FOODies — Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="topbar-wrap" role="banner">
+    <div class="topbar">
+        <div class="brand">
+            <a href="index.html" class="brand-link"><span class="logo-mark">▸</span><span class="brand-text">FOODies</span></a>
+        </div>
+        <nav class="menu" aria-label="Hovedmenu" role="navigation">
+            <a href="index.html" class="link active" aria-current="page">Hjem</a>
+            <a href="menu.html" class="link">Menu</a>
+            <a href="kon.html" class="link">Kontakt</a>
+            <a href="kurv.html" class="btn join">Kurv <span id="cart-count"></span></a>
+        </nav>
+    </div>
+</header>
+
+<main id="main" role="main">
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="accent">Welcome</span> to<br />
+                The world of<br />
+                <span class="strong">Testy &amp; Fresh Food.</span>
+            </h1>
+            <p class="hero-sub">Friske råvarer, hurtig levering, og kvalitet hver dag.</p>
+            <p class="cta-row">
+                <a class="btn primary" href="menu.html">Se menukortet</a>
+                <a class="btn" href="#how">Hvordan virker det?</a>
+            </p>
+        </div>
+        <div class="hero-visual">
+            <img class="burger" src="img/img.png" alt="Burger" />
+            <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+        </div>
+    </section>
+
+    <section class="categories">
+        <a href="menu.html?tag=pizza" class="cat">Pizza</a>
+        <a href="menu.html?tag=burger" class="cat">Burger</a>
+        <a href="menu.html?tag=pasta" class="cat">Pasta</a>
+        <a href="menu.html?tag=salad" class="cat">Salad</a>
+    </section>
+
+    <section class="teaser">
+        <article class="mini-card"><a href="menu.html"><img src="img/test.png" alt="Ugens valg" /><h3>Ugens valg</h3></a></article>
+        <article class="mini-card"><a href="menu.html"><img src="img/test.png" alt="Mest solgte" /><h3>Mest solgte</h3></a></article>
+        <article class="mini-card"><a href="menu.html"><img src="img/test.png" alt="Nyheder" /><h3>Nyheder</h3></a></article>
+    </section>
+
+    <section id="how" class="how">
+        <ol class="steps"><li>Vælg retter</li><li>Læg i kurv</li><li>Bestil/afhent</li></ol>
+        <a class="btn primary" href="menu.html">Bestil nu</a>
+    </section>
+
+    <section class="benefits">
+        <ul><li>Friske råvarer</li><li>Hurtig levering</li><li>Fair priser</li></ul>
+    </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+        <section class="f-col f-brand">
+            <a href="index.html" class="brand-link">
+                <span class="logo-mark">▸</span>
+                <span class="brand-text">FOODies</span>
+            </a>
+            <p class="about">Testy & Fresh Food — friske råvarer og hurtig levering hver dag.</p>
+            <p class="copy">© <span id="year"></span> FOODies. Alle rettigheder forbeholdes.</p>
+        </section>
+
+        <nav class="f-col" aria-label="Navigation">
+            <h4 class="f-title">Navigation</h4>
+            <ul class="f-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menus</a></li>
+                <li><a href="kurv.html">Kurv</a></li>
+                <li><a href="kon.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <nav class="f-col" aria-label="Hjælp">
+            <h4 class="f-title">Hjælp</h4>
+            <ul class="f-list">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Levering</a></li>
+                <li><a href="#">Retur &amp; Refusion</a></li>
+                <li><a href="#">Privatliv</a></li>
+            </ul>
+        </nav>
+
+        <section class="f-col f-contact">
+            <h4 class="f-title">Kontakt</h4>
+            <address class="contact">
+                <p>Email: <a href="mailto:hello@foodies.dk">hello@foodies.dk</a></p>
+                <p>Tel: <a href="tel:+4512345678">+45 12 34 56 78</a></p>
+                <p>Adresse: København, DK</p>
+            </address>
+        </section>
+    </div>
+</footer>
+<script src="js/kurv.js" defer></script>
+</body>
+</html>

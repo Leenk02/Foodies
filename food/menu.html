@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="da">
+<head>
+    <meta charset="utf-8" />
+    <title>FOODies — Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/menu.css" />
+</head>
+<body>
+<header class="topbar-wrap" role="banner">
+    <div class="topbar">
+        <div class="brand">
+            <a href="index.html" class="brand-link"><span class="logo-mark">▸</span><span class="brand-text">FOODies</span></a>
+        </div>
+        <nav class="menu" role="navigation" aria-label="Hovedmenu">
+            <a href="index.html" class="link">Home</a>
+            <a href="menu.html" class="link active">Menus</a>
+            <a href="kon.html" class="link">Contact</a>
+            <a href="kurv.html" class="btn join">Kurv <span id="cart-count"></span></a>
+        </nav>
+    </div>
+</header>
+
+<main id="main" role="main">
+    <section class="menu-hero">
+        <h1>Menukort</h1>
+        <p class="lead">Vælg din favorit — frisk, lækkert og klar hurtigt.</p>
+    </section>
+
+    <!-- Filters og søg (NU med id’er JS bruger) -->
+    <section class="filters" id="menu-filters">
+        <input id="q" type="search" placeholder="Søg efter retter..." aria-label="Søg" />
+        <select id="category" aria-label="Kategori">
+            <option value="Alle">Alle kategorier</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Burger">Burger</option>
+            <option value="Pasta">Pasta</option>
+            <option value="Salad">Salad</option>
+        </select>
+        <select id="sortBy" aria-label="Sortering">
+            <option value="none">Ingen sortering</option>
+            <option value="price-asc">Pris: lav til høj</option>
+            <option value="price-desc">Pris: høj til lav</option>
+            <option value="name-asc">Navn: A–Z</option>
+        </select>
+    </section>
+
+    <!-- Cards (JS rendrer her) -->
+    <section class="container" id="menu-app">
+        <div class="cards"><!-- fyldes dynamisk via menu.js --></div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+        <section class="f-col f-brand">
+            <a href="index.html" class="brand-link">
+                <span class="logo-mark">▸</span>
+                <span class="brand-text">FOODies</span>
+            </a>
+            <p class="about">Testy & Fresh Food — friske råvarer og hurtig levering hver dag.</p>
+            <p class="copy">© <span id="year"></span> FOODies. All rights reserved.</p>
+        </section>
+
+        <nav class="f-col" aria-label="Main">
+            <h4 class="f-title">Navigation</h4>
+            <ul class="f-list">
+                <li><a href="index.html">hjem</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="kon.html">kontakt</a></li>
+                <li><a href="#">Kurv</a></li>
+            </ul>
+        </nav>
+
+        <nav class="f-col" aria-label="Hjælp">
+            <h4 class="f-title">Hjælp</h4>
+            <ul class="f-list">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Levering</a></li>
+                <li><a href="#">Retur &amp; Refusion</a></li>
+                <li><a href="#">Privatliv</a></li>
+            </ul>
+        </nav>
+
+        <section class="f-col f-contact">
+            <h4 class="f-title">Kontakt</h4>
+            <address class="contact">
+                <p>Email: <a href="mailto:hello@foodies.dk">hello@foodies.dk</a></p>
+                <p>Tel: <a href="tel:+4512345678">+45 12 34 56 78</a></p>
+                <p>Adresse: København, DK</p>
+            </address>
+        </section>
+    </div>
+</footer>
+
+<!-- scripts -->
+<script src="js/data.js" defer></script>
+<script src="js/kurv.js" defer></script>
+<script src="js/menu.js" defer></script>
+
+</body>
+</html>

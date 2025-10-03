@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="da">
+<head>
+    <meta charset="utf-8" />
+    <title>FOODies — Kurv</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/kurv.css" />
+</head>
+<body>
+<!-- Header-->
+<header class="topbar-wrap" role="banner">
+    <div class="topbar">
+        <div class="brand">
+            <a href="index.html" class="brand-link"><span class="logo-mark">▸</span><span class="brand-text">FOODies</span></a>
+        </div>
+        <nav class="menu" role="navigation" aria-label="Hovedmenu">
+            <a href="index.html" class="link">Hjem</a>
+            <a href="menu.html" class="link">Menu</a>
+            <a href="kurv.html" class="link active">Kurv</a>
+        </nav>
+    </div>
+</header>
+
+<main class="cart-wrap" role="main">
+    <section class="cart-card">
+        <!-- Header rødt -->
+        <div class="cart-head">
+            <span class="cart-icon" aria-hidden="true">🛒</span>
+            <h1>Kurv</h1>
+        </div>
+
+        <!-- Elementer (dinamisk) -->
+        <div id="cart-items"></div>
+
+        <!-- Kommentar -->
+        <div class="cart-notes">
+            <label for="notes">Kommentar til ordre</label>
+            <textarea id="notes" rows="3" placeholder="Fx: pizza uden løg, ekstra ost ..."></textarea>
+        </div>
+
+        <!-- Total + handling -->
+        <div class="cart-footer">
+            <div class="total">
+                <span>Samlet pris</span>
+                <strong id="cart-total">0,-</strong>
+            </div>
+            <div class="actions">
+                <a class="btn ghost" href="menu.html">Tilbage til menu</a>
+                <button id="checkoutBtn" class="btn primary lg" type="button">Bestil</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+        <section class="f-col f-brand">
+            <a href="index.html" class="brand-link"><span class="logo-mark">▸</span><span class="brand-text">FOODies</span></a>
+            <p class="about">Testy & Fresh Food — friske råvarer og hurtig levering hver dag.</p>
+            <p class="copy">© <span id="year"></span> FOODies. All rights reserved.</p>
+        </section>
+        <nav class="f-col" aria-label="Main">
+            <h4 class="f-title">Navigation</h4>
+            <ul class="f-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menus</a></li>
+                <li><a href="kurv.html">Kurv</a></li>
+            </ul>
+        </nav>
+        <nav class="f-col" aria-label="Hjælp">
+            <h4 class="f-title">Hjælp</h4>
+            <ul class="f-list">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Levering</a></li>
+                <li><a href="#">Retur &amp; Refusion</a></li>
+                <li><a href="#">Privatliv</a></li>
+            </ul>
+        </nav>
+        <section class="f-col f-contact">
+            <h4 class="f-title">Kontakt</h4>
+            <address class="contact">
+                <p>Email: <a href="mailto:hello@foodies.dk">hello@foodies.dk</a></p>
+                <p>Tel: <a href="tel:+4512345678">+45 12 34 56 78</a></p>
+                <p>Adresse: København, DK</p>
+            </address>
+        </section>
+    </div>
+
+</footer>
+
+
+<!-- Modal -->
+<div id="order-modal" class="modal hidden" aria-hidden="true" role="dialog" aria-labelledby="order-title" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+        <h3 id="order-title">Tak for din bestilling!</h3>
+        <p id="order-summary">Din ordre er registreret.</p>
+        <div class="modal-actions">
+            <button id="modal-ok" class="btn primary" type="button">OK</button>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts  -->
+<script src="js/kurv.js" defer></script>
+<script src="js/kurv-page.js" defer></script>
+
+</body>
+</html>

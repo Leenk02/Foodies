@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="da">
+<head>
+    <meta charset="utf-8" />
+    <title>FOODies — Kontakt os</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/kon.css" />
+</head>
+<body>
+<!-- Header global -->
+<header class="topbar-wrap" role="banner">
+    <div class="topbar">
+        <div class="brand">
+            <a href="index.html" class="brand-link">
+                <span class="logo-mark">▸</span>
+                <span class="brand-text">FOODies</span>
+            </a>
+        </div>
+        <nav class="menu" aria-label="Hovedmenu" role="navigation">
+            <a href="index.html" class="link">Hjem</a>
+            <a href="menu.html" class="link">Menu</a>
+            <a href="kurv.html" class="link">Kurv</a>
+            <a href="kon.html" class="link active">Kontakt</a>
+        </nav>
+    </div>
+</header>
+
+<!-- baggrundsbillede -->
+<section class="kontakt-hero" role="img" aria-label=" billede">
+    <img src="img/img_2.png" alt="Kontakt hero billede" style="width: 100%; height: 260px; object-fit: cover;" />
+    <div class="hero-indhold">
+        <h1>KONTAKT OS</h1>
+        <p><a href="index.html">Hjem</a> / <span>Kontakt os</span></p>
+    </div>
+</section>
+
+
+<main class="kontakt-wrapper" role="main">
+    <h2 class="sektion-titel">Skriv gerne en besked</h2>
+
+    <section class="kontakt-grid">
+        <!-- Formular -->
+        <form class="kontakt-form" action="#" method="post" novalidate>
+            <div class="raekke tre">
+                <div class="felt">
+                    <label for="navn">Navn</label>
+                    <input id="navn" name="navn" type="text" placeholder="Navn" />
+                </div>
+                <div class="felt">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" placeholder="E-mail" />
+                </div>
+                <div class="felt">
+                    <label for="emne">Emne</label>
+                    <input id="emne" name="emne" type="text" placeholder="Emne" />
+                </div>
+            </div>
+
+            <div class="raekke">
+                <div class="felt">
+                    <label for="besked">Besked</label>
+                    <textarea id="besked" name="besked" rows="6" placeholder="Skriv din besked her..."></textarea>
+                </div>
+            </div>
+
+            <button class="btn primary" type="submit">Send</button>
+        </form>
+
+        <!-- Kontaktinfo -->
+        <aside class="kontakt-info" aria-label="Kontaktoplysninger">
+            <p>
+                Har du spørgsmål til vores retter, levering eller allergener? Skriv til os eller ring – vi svarer hurtigst muligt.
+            </p>
+            <ul class="info-liste">
+                <li>📞 Telefon: 090-080-0760</li>
+                <li>📍 Adresse: 456 New Dagon City Studio, Yankinn, Digital Estate</li>
+                <li>✉️ E-mail: <a href="mailto:info@company.com">info@company.com</a></li>
+            </ul>
+        </aside>
+    </section>
+</main>
+
+<!-- Footer  -->
+<footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+        <section class="f-col f-brand">
+            <a href="index.html" class="brand-link">
+                <span class="logo-mark">▸</span>
+                <span class="brand-text">FOODies</span>
+            </a>
+            <p class="about">Testy & Fresh Food — friske råvarer og hurtig levering hver dag.</p>
+            <p class="copy">© <span id="year"></span> FOODies. Alle rettigheder forbeholdes.</p>
+        </section>
+
+        <nav class="f-col" aria-label="Navigation">
+            <h4 class="f-title">Navigation</h4>
+            <ul class="f-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menus</a></li>
+                <li><a href="kurv.html">Kurv</a></li>
+                <li><a href="kon.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <nav class="f-col" aria-label="Hjælp">
+            <h4 class="f-title">Hjælp</h4>
+            <ul class="f-list">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Levering</a></li>
+                <li><a href="#">Retur &amp; Refusion</a></li>
+                <li><a href="#">Privatliv</a></li>
+            </ul>
+        </nav>
+
+        <section class="f-col f-contact">
+            <h4 class="f-title">Kontakt</h4>
+            <address class="contact">
+                <p>Email: <a href="mailto:hello@foodies.dk">hello@foodies.dk</a></p>
+                <p>Tel: <a href="tel:+4512345678">+45 12 34 56 78</a></p>
+                <p>Adresse: København, DK</p>
+            </address>
+        </section>
+    </div>
+</footer>
+
+</body>
+</html>
